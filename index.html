@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Driha Enterprise Product Information</title>
+<style>
+:root{--bg:#eef8ff;--ink:#0c2542;--muted:#53708d;--blue:#0f6fbe;--dark:#0a315a;--orange:#ff8a1a;--green:#18b65a;--line:rgba(15,111,190,.18)}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:radial-gradient(circle at 12% 16%,rgba(15,111,190,.20),transparent 30%),radial-gradient(circle at 92% 10%,rgba(255,122,24,.10),transparent 28%),linear-gradient(135deg,#fff 0%,#f3fbff 34%,#dff4ff 68%,#fff 100%);line-height:1.45}.wrap{width:min(1180px,calc(100% - 28px));margin:0 auto}
+header{padding:30px 0;background:radial-gradient(circle at 12% 20%,rgba(255,255,255,.92),transparent 24%),linear-gradient(135deg,#fff 0%,#edf9ff 43%,#bfeaff 100%);border-bottom:1px solid var(--line);box-shadow:0 18px 42px rgba(28,96,145,.16)}.header-row{display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:center}.brand{grid-column:2;display:flex;align-items:center;gap:22px}.brand img{width:178px;height:94px;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:20px;padding:10px;box-shadow:0 16px 30px rgba(15,111,190,.16)}h1{margin:0 0 7px;font-size:clamp(36px,4.2vw,62px);line-height:.95;color:#0b315a}.sub{margin:0;color:#315f83;font-weight:700}.header-actions{grid-column:3;justify-self:end;display:grid;grid-template-columns:auto auto;grid-template-areas:"call whatsapp" "phone phone";gap:10px 12px}.top-action,.phone,.price-whatsapp,.floating-action{display:flex;align-items:center;justify-content:center;border-radius:999px;text-decoration:none;font-weight:900;white-space:nowrap}.top-action{min-height:44px;padding:0 16px;border:1px solid var(--line)}.top-action.call{background:#fff;color:#0a4c91}.top-action.whatsapp,.price-whatsapp,.floating-action.whatsapp{background:linear-gradient(135deg,#23d366,#0a9f50);color:#fff}.phone{grid-area:phone;min-height:56px;padding:0 20px;background:linear-gradient(135deg,#0f6fbe,#0a4c91);color:#fff;font-size:clamp(21px,1.55vw,28px);border-radius:16px}.call{grid-area:call}.whatsapp{grid-area:whatsapp}
+.intro{padding:28px 0 10px;color:#4f6d88;font-weight:700}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;padding:18px 0 70px}.product-card{display:grid;grid-template-rows:auto 260px 48px 58px 1fr;gap:10px;background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(239,249,255,.94));border:1px solid var(--line);border-radius:20px;padding:14px;box-shadow:0 16px 40px rgba(28,96,145,.14);transition:.22s ease}.product-card:hover{transform:translateY(-4px);box-shadow:0 24px 56px rgba(28,96,145,.20);border-color:rgba(255,122,24,.34)}.number{display:inline-flex;background:linear-gradient(135deg,#ff8a1a,#ffc233);color:#10233f;border-radius:999px;padding:6px 11px;font-weight:900;font-size:13px}.image-wrap{position:relative;display:flex;align-items:center;justify-content:center;width:100%;height:260px;border:1px solid var(--line);border-radius:16px;padding:12px;background:radial-gradient(circle at 18% 18%,rgba(255,255,255,.86),transparent 26%),linear-gradient(135deg,#fff 0%,#d9f2ff 45%,#acdfff 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.94),0 14px 28px rgba(28,96,145,.10);cursor:zoom-in;overflow:hidden}.image-wrap:after{content:"Click to zoom";position:absolute;right:12px;bottom:10px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.92);color:#0f5fa8;font-size:11px;font-weight:900;opacity:0;transform:translateY(6px);transition:.22s ease}.product-card:hover .image-wrap:after{opacity:1;transform:translateY(0)}.image-wrap img{max-width:92%;max-height:88%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 18px 18px rgba(0,0,0,.15))}.price-whatsapp{border-radius:14px;min-height:44px;padding:9px 12px;font-size:13px;box-shadow:0 14px 28px rgba(35,211,102,.26)}h2{margin:0;display:flex;align-items:center;justify-content:center;text-align:center;min-height:46px;color:#0a315a;font-size:20px;line-height:1.16}.description-box{background:radial-gradient(circle at 14% 12%,rgba(255,255,255,.34),transparent 30%),linear-gradient(135deg,#1f6ed8 0%,#2186ec 52%,#3aa0ff 100%);border:1px solid rgba(210,235,255,.72);border-radius:14px;padding:12px;color:#fff;box-shadow:0 12px 26px rgba(31,110,216,.20)}.description-box span{display:block;font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}ul{margin:0;padding-left:18px;font-size:14px;font-weight:600;line-height:1.62}li::marker{color:#e8f6ff}.contact-section{padding:54px 0 62px;background:linear-gradient(135deg,rgba(255,255,255,.62),rgba(217,242,255,.50))}.contact-box{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:center;border:1px solid var(--line);border-radius:28px;padding:30px;background:#fff;box-shadow:0 24px 58px rgba(28,96,145,.16)}.contact-kicker{display:inline-flex;padding:8px 13px;border-radius:999px;background:#e0f5ff;color:#0c5ea4;font-weight:900;font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}.contact-box h3{margin:0 0 12px;font-size:clamp(30px,4.5vw,48px);line-height:1.03;color:#0a315a}.contact-box p{margin:0;color:#4e6b86;font-weight:700;line-height:1.7}.contact-panel{border-radius:24px;padding:22px;background:rgba(255,255,255,.84);border:1px solid var(--line)}.contact-phone{display:block;color:#0a315a;font-size:30px;line-height:1.1;font-weight:900;margin-bottom:16px}.contact-buttons{display:flex;gap:12px;flex-wrap:wrap}.contact-action{min-height:48px;padding:0 18px;border-radius:999px;text-decoration:none;font-weight:900}footer{border-top:1px solid var(--line);padding:22px 0 34px;color:#55708d;text-align:center;background:rgba(255,255,255,.68)}.floating-actions{position:fixed;right:18px;bottom:18px;z-index:80;display:grid;grid-template-columns:repeat(2,58px);gap:10px}.floating-action{width:58px;height:58px;border-radius:18px;box-shadow:0 16px 34px rgba(15,23,42,.18);font-size:22px}.floating-action.call{background:#fff;color:#ff6a00;border:1px solid var(--line)}.zoom-modal{position:fixed;inset:0;z-index:999;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(5,36,66,.58);backdrop-filter:blur(14px)}.zoom-modal.active{display:flex}body.zoom-open{overflow:hidden}.zoom-card{width:min(980px,94vw);max-height:92vh;border-radius:28px;padding:18px;background:linear-gradient(180deg,#fff,#e6f6ff);border:1px solid var(--line);box-shadow:0 34px 80px rgba(11,49,90,.28);position:relative}.zoom-shell{min-height:min(64vh,620px);border-radius:22px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#fff,#d6f0ff,#afdfff);padding:24px;overflow:hidden}.zoom-shell img{max-width:100%;max-height:64vh;width:auto;height:auto;object-fit:contain}.zoom-title{margin:14px 8px 2px;text-align:center;color:#0a315a;font-size:clamp(22px,3vw,34px)}.zoom-close{position:absolute;right:16px;top:16px;border:0;border-radius:999px;min-height:44px;padding:0 16px;background:linear-gradient(135deg,#ff8a1a,#ffc233);color:#10233f;font-weight:900;cursor:pointer}
+@media(max-width:900px){.header-row{grid-template-columns:1fr}.brand,.header-actions{grid-column:1;justify-self:center}.brand{flex-direction:column;text-align:center}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.contact-box{grid-template-columns:1fr}}@media(max-width:580px){.wrap{width:min(100% - 20px,1180px)}.grid{grid-template-columns:1fr}.product-card{grid-template-rows:auto 300px 48px auto 1fr}.header-actions{grid-template-columns:1fr 1fr;width:100%}.brand img{width:145px;height:82px}h1{font-size:34px}}
+</style>
+</head>
+<body>
+<header><div class="wrap header-row"><div class="brand"><img class="site-logo-img" src="assets/logo/DRIHA LOGO.png" alt="Driha Enterprise Logo"><div><h1>DRIHA ENTERPRISE</h1><p class="sub">Solar Structure Accessories • Product Information</p></div></div><div class="header-actions"><a class="top-action call" href="tel:+917778871079">Call Now</a><a class="top-action whatsapp" href="https://wa.me/917778871079" target="_blank" rel="noopener">WhatsApp</a><div class="phone">+91 7778871079</div></div></div></header>
+<main class="wrap"><p class="intro">High quality solar structure accessories with product-wise price enquiry.</p><section class="grid"><article class="product-card">
+  <div class="card-top"><span class="number">01</span></div>
+  <button class="image-wrap" type="button" data-title="MONO-RAILS" data-img="assets/products/01_mono-rails.png" aria-label="Zoom MONO-RAILS image"><img src="assets/products/01_mono-rails.png" alt="MONO-RAILS" loading="lazy"></button>
+  <a class="price-whatsapp" href="https://wa.me/917778871079?text=Hello%20Driha%20Enterprise%2C%0A%0APlease%20send%20price%20details%20for%20this%20product.%0A%0AProduct%3A%20MONO-RAILS%0ADetails%3A%0A-%20100X300%0A-%20100X300%20STAND%0A-%2060X300%0A-%2060X300%20STAND%0A-%2070X300%0A-%2070X300%20STAND%0A-%2031X31MM%0A-%2041X41MM%0A-%20D-RAIL" target="_blank" rel="noopener">MONO-RAILS Price Details</a>
+  <h2>MONO-RAILS</h2>
+  <div class="description-box"><span>Description</span><ul><li>100X300</li><li>100X300 STAND</li><li>60X300</li><li>60X300 STAND</li><li>70X300</li><li>70X300 STAND</li><li>31X31MM</li><li>41X41MM</li><li>D-RAIL</li></ul></div>
+</article><article class="product-card">
+  <div class="card-top"><span class="number">02</span></div>
+  <button class="image-wrap" type="button" data-title="MID CLAMP" data-img="assets/products/02_mid-clamp.png" aria-label="Zoom MID CLAMP image"><img src="assets/products/02_mid-clamp.png" alt="MID CLAMP" loading="lazy"></button>
+  <a class="price-whatsapp" href="https://wa.me/917778871079?text=Hello%20Driha%20Enterprise%2C%0A%0APlease%20send%20price%20details%20for%20this%20product.%0A%0AProduct%3A%20MID%20CLAMP%0ADetails%3A%0A-%2025X50MM%0A-%2030X50MM%0A-%2035X50MM%0A-%2025X75MM%0A-%2030X75MM%0A-%2035X75MM" target="_blank" rel="noopener">MID CLAMP Price Details</a>
+  <h2>MID CLAMP</h2>
+  <div class="description-box"><span>Description</span><ul><li>25X50MM</li><li>30X50MM</li><li>35X50MM</li><li>25X75MM</li><li>30X75MM</li><li>35X75MM</li></ul></div>
+</article><article class="product-card">
+  <div class="card-top"><span class="number">03</span></div>
+  <button class="image-wrap" type="button" data-title="END CLAMP" data-img="assets/products/03_end-clamp.png" aria-label="Zoom END CLAMP image"><img src="assets/products/03_end-clamp.png" alt="END CLAMP" loading="lazy"></button>
+  <a class="price-whatsapp" href="https://wa.me/917778871079?text=Hello%20Driha%20Enterprise%2C%0A%0APlease%20send%20price%20details%20for%20this%20product.%0A%0AProduct%3A%20END%20CLAMP%0ADetails%3A%0A-%2028X50MM%0A-%2030X50MM%0A-%2035X50MM%0A-%2028X75MM%0A-%2030X75MM%0A-%2035X75MM" target="_blank" rel="noopener">END CLAMP Price Details</a>
+  <h2>END CLAMP</h2>
+  <div class="description-box"><span>Description</span><ul><li>28X50MM</li><li>30X50MM</li><li>35X50MM</li><li>28X75MM</li><li>30X75MM</li><li>35X75MM</li></ul></div>
+</article><article class="product-card">
+  <div class="card-top"><span class="number">04</span></div>
+  <button class="image-wrap" type="button" data-title="ALUMINIUM NUT" data-img="assets/products/04_aluminium-nut.png" aria-label="Zoom ALUMINIUM NUT image"><img src="assets/products/04_aluminium-nut.png" alt="ALUMINIUM NUT" loading="lazy"></button>
+  <a class="price-whatsapp" href="https://wa.me/917778871079?text=Hello%20Driha%20Enterprise%2C%0A%0APlease%20send%20price%20details%20for%20this%20product.%0A%0AProduct%3A%20ALUMINIUM%20NUT%0ADetails%3A%0A-%20SIZE%20%3D%20M8" target="_blank" rel="noopener">ALUMINIUM NUT Price Details</a>
+  <h2>ALUMINIUM NUT</h2>
+  <div class="description-box"><span>Description</span><ul><li>SIZE = M8</li></ul></div>
+</article><article class="product-card">
+  <div class="card-top"><span class="number">05</span></div>
+  <button class="image-wrap" type="button" data-title="SPRING NUT" data-img="assets/products/05_spring-nut.png" aria-label="Zoom SPRING NUT image"><img src="assets/products/05_spring-nut.png" alt="SPRING NUT" loading="lazy"></button>
+  <a class="price-whatsapp" href="https://wa.me/917778871079?text=Hello%20Driha%20Enterprise%2C%0A%0APlease%20send%20price%20details%20for%20this%20product.%0A%0AProduct%3A%20SPRING%20NUT%0ADetails%3A%0A-%20SIZE%20%3D%20M8" target="_blank" rel="noopener">SPRING NUT Price Details</a>
+  <h2>SPRING NUT</h2>
+  <div class="description-box"><span>Description</span><ul><li>SIZE = M8</li></ul></div>
+</article><article class="product-card">
+  <div class="card-top"><span class="number">06</span></div>
+  <button class="image-wrap" type="button" data-title="S.S 304 - J BOLT" data-img="assets/products/06_ss-304-j-bolt.png" aria-label="Zoom S.S 304 - J BOLT image"><img src="assets/products/06_ss-304-j-bolt.png" alt="S.S 304 - J BOLT" loading="lazy"></button>
+  <a class="price-whatsapp" href="https://wa.me/917778871079?text=Hello%20Driha%20Enterprise%2C%0A%0APlease%20send%20price%20details%20for%20this%20product.%0A%0AProduct%3A%20S.S%20304%20-%20J%20BOLT%0ADetails%3A%0A-%2053X40X25%0A-%2070X40X25%0A-%2065X50X25" target="_blank" rel="noopener">S.S 304 - J BOLT Price Details</a>
+  <h2>S.S 304 - J BOLT</h2>
+  <div class="description-box"><span>Description</span><ul><li>53X40X25</li><li>70X40X25</li><li>65X50X25</li></ul></div>
+</article><article class="product-card">
+  <div class="card-top"><span class="number">07</span></div>
+  <button class="image-wrap" type="button" data-title="SS 304 U BOLT WITH FLANGE NUT" data-img="assets/products/07_ss-304-u-bolt-with-flange-nut.png" aria-label="Zoom SS 304 U BOLT WITH FLANGE NUT image"><img src="assets/products/07_ss-304-u-bolt-with-flange-nut.png" alt="SS 304 U BOLT WITH FLANGE NUT" loading="lazy"></button>
+  <a class="price-whatsapp" href="https://wa.me/917778871079?text=Hello%20Driha%20Enterprise%2C%0A%0APlease%20send%20price%20details%20for%20this%20product.%0A%0AProduct%3A%20SS%20304%20U%20BOLT%20WITH%20FLANGE%20NUT%0ADetails%3A%0A-%2040X40%0A-%2050X40%0A-%2080X40%0A-%20110X40" target="_blank" rel="noopener">SS 304 U BOLT WITH FLANGE NUT Price Details</a>
+  <h2>SS 304 U BOLT WITH FLANGE NUT</h2>
+  <div class="description-box"><span>Description</span><ul><li>40X40</li><li>50X40</li><li>80X40</li><li>110X40</li></ul></div>
+</article><article class="product-card">
+  <div class="card-top"><span class="number">08</span></div>
+  <button class="image-wrap" type="button" data-title="ZINC COATED U BOLT PATTI" data-img="assets/products/08_zinc-coated-u-bolt-patti.png" aria-label="Zoom ZINC COATED U BOLT PATTI image"><img src="assets/products/08_zinc-coated-u-bolt-patti.png" alt="ZINC COATED U BOLT PATTI" loading="lazy"></button>
+  <a class="price-whatsapp" href="https://wa.me/917778871079?text=Hello%20Driha%20Enterprise%2C%0A%0APlease%20send%20price%20details%20for%20this%20product.%0A%0AProduct%3A%20ZINC%20COATED%20U%20BOLT%20PATTI%0ADetails%3A%0A-%20Standard" target="_blank" rel="noopener">ZINC COATED U BOLT PATTI Price Details</a>
+  <h2>ZINC COATED U BOLT PATTI</h2>
+  <div class="description-box"><span>Description</span><ul><li>Standard</li></ul></div>
+</article><article class="product-card">
+  <div class="card-top"><span class="number">09</span></div>
+  <button class="image-wrap" type="button" data-title="BASE PLATE" data-img="assets/products/09_base-plate.png" aria-label="Zoom BASE PLATE image"><img src="assets/products/09_base-plate.png" alt="BASE PLATE" loading="lazy"></button>
+  <a class="price-whatsapp" href="https://wa.me/917778871079?text=Hello%20Driha%20Enterprise%2C%0A%0APlease%20send%20price%20details%20for%20this%20product.%0A%0AProduct%3A%20BASE%20PLATE%0ADetails%3A%0A-%20125X125X3%0A-%20125X125X4%0A-%20125X125X5%0A-%20125X125X8%0A-%20150X150X3%0A-%20150X150X4%0A-%20150X150X5%0A-%20150X150X8%0A-%20200X200X3%0A-%20200X200X4%0A-%20200X200X5" target="_blank" rel="noopener">BASE PLATE Price Details</a>
+  <h2>BASE PLATE</h2>
+  <div class="description-box"><span>Description</span><ul><li>125X125X3</li><li>125X125X4</li><li>125X125X5</li><li>125X125X8</li><li>150X150X3</li><li>150X150X4</li><li>150X150X5</li><li>150X150X8</li><li>200X200X3</li><li>200X200X4</li><li>200X200X5</li></ul></div>
+</article><article class="product-card">
+  <div class="card-top"><span class="number">10</span></div>
+  <button class="image-wrap" type="button" data-title="WEDGE ANCHOR FASTNER" data-img="assets/products/10_wedge-anchor-fastener.png" aria-label="Zoom WEDGE ANCHOR FASTNER image"><img src="assets/products/10_wedge-anchor-fastener.png" alt="WEDGE ANCHOR FASTNER" loading="lazy"></button>
+  <a class="price-whatsapp" href="https://wa.me/917778871079?text=Hello%20Driha%20Enterprise%2C%0A%0APlease%20send%20price%20details%20for%20this%20product.%0A%0AProduct%3A%20WEDGE%20ANCHOR%20FASTNER%0ADetails%3A%0A-%20M10X75%0A-%20M10X100%0A-%20M10X120%0A-%20M10X150%0A-%20M10X200%0A-%20M12X75%0A-%20M12X100%0A-%20M12X120%0A-%20M12X150%0A-%20M12X200" target="_blank" rel="noopener">WEDGE ANCHOR FASTNER Price Details</a>
+  <h2>WEDGE ANCHOR FASTNER</h2>
+  <div class="description-box"><span>Description</span><ul><li>M10X75</li><li>M10X100</li><li>M10X120</li><li>M10X150</li><li>M10X200</li><li>M12X75</li><li>M12X100</li><li>M12X120</li><li>M12X150</li><li>M12X200</li></ul></div>
+</article><article class="product-card">
+  <div class="card-top"><span class="number">11</span></div>
+  <button class="image-wrap" type="button" data-title="PIN TYPE ANCHOR FASTNER" data-img="assets/products/11_pin-type-anchor-fastener.png" aria-label="Zoom PIN TYPE ANCHOR FASTNER image"><img src="assets/products/11_pin-type-anchor-fastener.png" alt="PIN TYPE ANCHOR FASTNER" loading="lazy"></button>
+  <a class="price-whatsapp" href="https://wa.me/917778871079?text=Hello%20Driha%20Enterprise%2C%0A%0APlease%20send%20price%20details%20for%20this%20product.%0A%0AProduct%3A%20PIN%20TYPE%20ANCHOR%20FASTNER%0ADetails%3A%0A-%20M10X75%0A-%20M10X100%0A-%20M10X120%0A-%20M10X150%0A-%20M10X200%0A-%20M12X75%0A-%20M12X100%0A-%20M12X120%0A-%20M12X150%0A-%20M12X200" target="_blank" rel="noopener">PIN TYPE ANCHOR FASTNER Price Details</a>
+  <h2>PIN TYPE ANCHOR FASTNER</h2>
+  <div class="description-box"><span>Description</span><ul><li>M10X75</li><li>M10X100</li><li>M10X120</li><li>M10X150</li><li>M10X200</li><li>M12X75</li><li>M12X100</li><li>M12X120</li><li>M12X150</li><li>M12X200</li></ul></div>
+</article><article class="product-card">
+  <div class="card-top"><span class="number">12</span></div>
+  <button class="image-wrap" type="button" data-title="SOLAR CLEANING BRUSH" data-img="assets/products/12_solar-cleaning-brush.png" aria-label="Zoom SOLAR CLEANING BRUSH image"><img src="assets/products/12_solar-cleaning-brush.png" alt="SOLAR CLEANING BRUSH" loading="lazy"></button>
+  <a class="price-whatsapp" href="https://wa.me/917778871079?text=Hello%20Driha%20Enterprise%2C%0A%0APlease%20send%20price%20details%20for%20this%20product.%0A%0AProduct%3A%20SOLAR%20CLEANING%20BRUSH%0ADetails%3A%0A-%203%20MTR%0A-%204%20MTR%0A-%206%20MTR%0A-%209%20MTR" target="_blank" rel="noopener">SOLAR CLEANING BRUSH Price Details</a>
+  <h2>SOLAR CLEANING BRUSH</h2>
+  <div class="description-box"><span>Description</span><ul><li>3 MTR</li><li>4 MTR</li><li>6 MTR</li><li>9 MTR</li></ul></div>
+</article><article class="product-card">
+  <div class="card-top"><span class="number">13</span></div>
+  <button class="image-wrap" type="button" data-title="SS ALLEN BOLT" data-img="assets/products/13_ss-allen-bolt.png" aria-label="Zoom SS ALLEN BOLT image"><img src="assets/products/13_ss-allen-bolt.png" alt="SS ALLEN BOLT" loading="lazy"></button>
+  <a class="price-whatsapp" href="https://wa.me/917778871079?text=Hello%20Driha%20Enterprise%2C%0A%0APlease%20send%20price%20details%20for%20this%20product.%0A%0AProduct%3A%20SS%20ALLEN%20BOLT%0ADetails%3A%0A-%2016MM%0A-%2020MM%0A-%2025MM%0A-%2030MM%0A-%2035MM%0A-%2050MM%0A-%2065MM" target="_blank" rel="noopener">SS ALLEN BOLT Price Details</a>
+  <h2>SS ALLEN BOLT</h2>
+  <div class="description-box"><span>Description</span><ul><li>16MM</li><li>20MM</li><li>25MM</li><li>30MM</li><li>35MM</li><li>50MM</li><li>65MM</li></ul></div>
+</article><article class="product-card">
+  <div class="card-top"><span class="number">14</span></div>
+  <button class="image-wrap" type="button" data-title="POP-RIVET" data-img="assets/products/14_pop-rivet.png" aria-label="Zoom POP-RIVET image"><img src="assets/products/14_pop-rivet.png" alt="POP-RIVET" loading="lazy"></button>
+  <a class="price-whatsapp" href="https://wa.me/917778871079?text=Hello%20Driha%20Enterprise%2C%0A%0APlease%20send%20price%20details%20for%20this%20product.%0A%0AProduct%3A%20POP-RIVET%0ADetails%3A%0A-%20Plain%20Rivet%0A-%20Multi%20Grip%20Rivet" target="_blank" rel="noopener">POP-RIVET Price Details</a>
+  <h2>POP-RIVET</h2>
+  <div class="description-box"><span>Description</span><ul><li>Plain Rivet</li><li>Multi Grip Rivet</li></ul></div>
+</article><article class="product-card">
+  <div class="card-top"><span class="number">15</span></div>
+  <button class="image-wrap" type="button" data-title="FRP WALK WAY GRATING" data-img="assets/products/15_frp-walkway-grating.png" aria-label="Zoom FRP WALK WAY GRATING image"><img src="assets/products/15_frp-walkway-grating.png" alt="FRP WALK WAY GRATING" loading="lazy"></button>
+  <a class="price-whatsapp" href="https://wa.me/917778871079?text=Hello%20Driha%20Enterprise%2C%0A%0APlease%20send%20price%20details%20for%20this%20product.%0A%0AProduct%3A%20FRP%20WALK%20WAY%20GRATING%0ADetails%3A%0A-%20LENGTH%203.66%20MTR%2C%20WIDTH%20310MM%2C%20HEIGHT%2025MM%0A-%20LENGTH%203.66%20MTR%2C%20WIDTH%20273MM%2C%20HEIGHT%2025MM" target="_blank" rel="noopener">FRP WALK WAY GRATING Price Details</a>
+  <h2>FRP WALK WAY GRATING</h2>
+  <div class="description-box"><span>Description</span><ul><li>LENGTH 3.66 MTR, WIDTH 310MM, HEIGHT 25MM</li><li>LENGTH 3.66 MTR, WIDTH 273MM, HEIGHT 25MM</li></ul></div>
+</article><article class="product-card">
+  <div class="card-top"><span class="number">16</span></div>
+  <button class="image-wrap" type="button" data-title="UV - CABLE TIE" data-img="assets/products/16_uv-cable-tie.png" aria-label="Zoom UV - CABLE TIE image"><img src="assets/products/16_uv-cable-tie.png" alt="UV - CABLE TIE" loading="lazy"></button>
+  <a class="price-whatsapp" href="https://wa.me/917778871079?text=Hello%20Driha%20Enterprise%2C%0A%0APlease%20send%20price%20details%20for%20this%20product.%0A%0AProduct%3A%20UV%20-%20CABLE%20TIE%0ADetails%3A%0A-%20All%20Size%20Available" target="_blank" rel="noopener">UV - CABLE TIE Price Details</a>
+  <h2>UV - CABLE TIE</h2>
+  <div class="description-box"><span>Description</span><ul><li>All Size Available</li></ul></div>
+</article><article class="product-card">
+  <div class="card-top"><span class="number">17</span></div>
+  <button class="image-wrap" type="button" data-title="CONDUIT PIPES &amp; FITTINGS" data-img="assets/products/17_conduit-pipes-fittings.png" aria-label="Zoom CONDUIT PIPES &amp; FITTINGS image"><img src="assets/products/17_conduit-pipes-fittings.png" alt="CONDUIT PIPES &amp; FITTINGS" loading="lazy"></button>
+  <a class="price-whatsapp" href="https://wa.me/917778871079?text=Hello%20Driha%20Enterprise%2C%0A%0APlease%20send%20price%20details%20for%20this%20product.%0A%0AProduct%3A%20CONDUIT%20PIPES%20%26%20FITTINGS%0ADetails%3A%0A-%20All%20Size%20Available" target="_blank" rel="noopener">CONDUIT PIPES & FITTINGS Price Details</a>
+  <h2>CONDUIT PIPES &amp; FITTINGS</h2>
+  <div class="description-box"><span>Description</span><ul><li>All Size Available</li></ul></div>
+</article><article class="product-card">
+  <div class="card-top"><span class="number">18</span></div>
+  <button class="image-wrap" type="button" data-title="PG CABLE GLAND" data-img="assets/products/18_pg-cable-gland.png" aria-label="Zoom PG CABLE GLAND image"><img src="assets/products/18_pg-cable-gland.png" alt="PG CABLE GLAND" loading="lazy"></button>
+  <a class="price-whatsapp" href="https://wa.me/917778871079?text=Hello%20Driha%20Enterprise%2C%0A%0APlease%20send%20price%20details%20for%20this%20product.%0A%0AProduct%3A%20PG%20CABLE%20GLAND%0ADetails%3A%0A-%20PG-7%0A-%20PG-9%0A-%20PG-11%0A-%20PG-13%0A-%20PG-16%0A-%20PG-19%0A-%20PG-21%0A-%20PG-25%0A-%20PG-29" target="_blank" rel="noopener">PG CABLE GLAND Price Details</a>
+  <h2>PG CABLE GLAND</h2>
+  <div class="description-box"><span>Description</span><ul><li>PG-7</li><li>PG-9</li><li>PG-11</li><li>PG-13</li><li>PG-16</li><li>PG-19</li><li>PG-21</li><li>PG-25</li><li>PG-29</li></ul></div>
+</article><article class="product-card">
+  <div class="card-top"><span class="number">19</span></div>
+  <button class="image-wrap" type="button" data-title="S.S FRP M CLAMP" data-img="assets/products/19_ss-frp-m-clamp.png" aria-label="Zoom S.S FRP M CLAMP image"><img src="assets/products/19_ss-frp-m-clamp.png" alt="S.S FRP M CLAMP" loading="lazy"></button>
+  <a class="price-whatsapp" href="https://wa.me/917778871079?text=Hello%20Driha%20Enterprise%2C%0A%0APlease%20send%20price%20details%20for%20this%20product.%0A%0AProduct%3A%20S.S%20FRP%20M%20CLAMP%0ADetails%3A%0A-%20Standard" target="_blank" rel="noopener">S.S FRP M CLAMP Price Details</a>
+  <h2>S.S FRP M CLAMP</h2>
+  <div class="description-box"><span>Description</span><ul><li>Standard</li></ul></div>
+</article><article class="product-card">
+  <div class="card-top"><span class="number">20</span></div>
+  <button class="image-wrap" type="button" data-title="S.S FRP C- CLAMP" data-img="assets/products/20_ss-frp-c-clamp.png" aria-label="Zoom S.S FRP C- CLAMP image"><img src="assets/products/20_ss-frp-c-clamp.png" alt="S.S FRP C- CLAMP" loading="lazy"></button>
+  <a class="price-whatsapp" href="https://wa.me/917778871079?text=Hello%20Driha%20Enterprise%2C%0A%0APlease%20send%20price%20details%20for%20this%20product.%0A%0AProduct%3A%20S.S%20FRP%20C-%20CLAMP%0ADetails%3A%0A-%20Standard" target="_blank" rel="noopener">S.S FRP C- CLAMP Price Details</a>
+  <h2>S.S FRP C- CLAMP</h2>
+  <div class="description-box"><span>Description</span><ul><li>Standard</li></ul></div>
+</article><article class="product-card">
+  <div class="card-top"><span class="number">21</span></div>
+  <button class="image-wrap" type="button" data-title="SINGLE SPIKE EARTHING KIT" data-img="assets/products/21_single-spike-earthing-kit.png" aria-label="Zoom SINGLE SPIKE EARTHING KIT image"><img src="assets/products/21_single-spike-earthing-kit.png" alt="SINGLE SPIKE EARTHING KIT" loading="lazy"></button>
+  <a class="price-whatsapp" href="https://wa.me/917778871079?text=Hello%20Driha%20Enterprise%2C%0A%0APlease%20send%20price%20details%20for%20this%20product.%0A%0AProduct%3A%20SINGLE%20SPIKE%20EARTHING%20KIT%0ADetails%3A%0A-%20Standard" target="_blank" rel="noopener">SINGLE SPIKE EARTHING KIT Price Details</a>
+  <h2>SINGLE SPIKE EARTHING KIT</h2>
+  <div class="description-box"><span>Description</span><ul><li>Standard</li></ul></div>
+</article><article class="product-card">
+  <div class="card-top"><span class="number">22</span></div>
+  <button class="image-wrap" type="button" data-title="MULTI SPIKE EARTHING KIT" data-img="assets/products/22_multi-spike-earthing-kit.png" aria-label="Zoom MULTI SPIKE EARTHING KIT image"><img src="assets/products/22_multi-spike-earthing-kit.png" alt="MULTI SPIKE EARTHING KIT" loading="lazy"></button>
+  <a class="price-whatsapp" href="https://wa.me/917778871079?text=Hello%20Driha%20Enterprise%2C%0A%0APlease%20send%20price%20details%20for%20this%20product.%0A%0AProduct%3A%20MULTI%20SPIKE%20EARTHING%20KIT%0ADetails%3A%0A-%20Standard" target="_blank" rel="noopener">MULTI SPIKE EARTHING KIT Price Details</a>
+  <h2>MULTI SPIKE EARTHING KIT</h2>
+  <div class="description-box"><span>Description</span><ul><li>Standard</li></ul></div>
+</article><article class="product-card">
+  <div class="card-top"><span class="number">23</span></div>
+  <button class="image-wrap" type="button" data-title="EPDM FOR MONORAIL" data-img="assets/products/23_epdm-for-monorail.png" aria-label="Zoom EPDM FOR MONORAIL image"><img src="assets/products/23_epdm-for-monorail.png" alt="EPDM FOR MONORAIL" loading="lazy"></button>
+  <a class="price-whatsapp" href="https://wa.me/917778871079?text=Hello%20Driha%20Enterprise%2C%0A%0APlease%20send%20price%20details%20for%20this%20product.%0A%0AProduct%3A%20EPDM%20FOR%20MONORAIL%0ADetails%3A%0A-%20Standard" target="_blank" rel="noopener">EPDM FOR MONORAIL Price Details</a>
+  <h2>EPDM FOR MONORAIL</h2>
+  <div class="description-box"><span>Description</span><ul><li>Standard</li></ul></div>
+</article></section></main>
+<section class="contact-section"><div class="wrap contact-box"><div><span class="contact-kicker">Contact Us</span><h3>Need product price details?</h3><p>Click any product button or contact us directly for quotation, availability and bulk order details.</p></div><div class="contact-panel"><span class="contact-phone">+91 7778871079</span><div class="contact-buttons"><a class="contact-action call top-action" href="tel:+917778871079">Call Now</a><a class="contact-action whatsapp top-action" href="https://wa.me/917778871079" target="_blank" rel="noopener">WhatsApp</a></div></div></div></section>
+<footer>© Driha Enterprise. All rights reserved.</footer>
+<div class="floating-actions"><a class="floating-action call" href="tel:+917778871079" aria-label="Call">☎</a><a class="floating-action whatsapp" href="https://wa.me/917778871079" target="_blank" rel="noopener" aria-label="WhatsApp">☘</a></div>
+<div class="zoom-modal" id="zoomModal" role="dialog" aria-modal="true"><div class="zoom-card"><button class="zoom-close" id="zoomClose" type="button">Close</button><div class="zoom-shell"><img id="zoomImg" src="" alt=""></div><h3 class="zoom-title" id="zoomTitle"></h3></div></div>
+<script>
+const modal=document.getElementById('zoomModal'),zoomImg=document.getElementById('zoomImg'),zoomTitle=document.getElementById('zoomTitle'),closeBtn=document.getElementById('zoomClose');
+document.querySelectorAll('.image-wrap').forEach(btn=>btn.addEventListener('click',()=>{zoomImg.src=btn.dataset.img;zoomImg.alt=btn.dataset.title;zoomTitle.textContent=btn.dataset.title;modal.classList.add('active');document.body.classList.add('zoom-open');}));
+function closeZoom(){modal.classList.remove('active');document.body.classList.remove('zoom-open');zoomImg.src='';}
+closeBtn.addEventListener('click',closeZoom);modal.addEventListener('click',e=>{if(e.target===modal)closeZoom();});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeZoom();});
+</script>
+</body>
+</html>
